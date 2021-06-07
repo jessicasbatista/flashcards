@@ -1,0 +1,74 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/world.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    justify-content: space-around;
+    margin: auto;
+    flex-flow: row wrap;
+}
+
+.card {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 124px;
+    width: 124px;
+    justify-content: center;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    margin: 0 0 0;
+    transition: all 1s linear 0s;
+}
+
+.front, .back {
+    display: flex;
+    height: 124px;
+    width: 124px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat, sans-serif;
+    position: absolute;
+    border-radius: 10px;
+
+}
+
+.front {
+    background-color: bisque;
+    z-index: 2;
+    backface-visibility: hidden;
+    color: orange;
+}
+
+.back {
+    background-color: orange;
+    z-index: 1;
+    transform: rotateY(180deg);
+    color: bisque;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+p {
+    text-align: center;
+}
+
